@@ -607,18 +607,6 @@ cts_sci_filtered = cts_sci[apply(cts_sci[-1], 1, function(x){sum(!is.na(x))/leng
 sci_sum = data.frame(Sample = colnames(cts_sci_filtered[-1]), Sum_SCI = colSums(cts_sci_filtered[-1], na.rm = T))
 sci_sum$Sum_SCI = log2(sci_sum$Sum_SCI + 1)
 
-# # Load Linear Data (Poly-A) -> DESeq2 Normalized
-# dds = readRDS(file.path('results/RESTART/7.PolyA/', str_glue('dds_{type}_polyA.rds')))
-# cts_linear = counts(dds, normalized = T) # Extract Normalized Counts
-# cts_linear = data.frame(cts_linear)
-# colnames(cts_linear) = str_replace_all(colnames(cts_linear), pattern = '\\.', replacement = ' ')
-# 
-# # Only RBP lists
-# genelist_RBP = fread(file = 'RBP/NuclearRBP.txt', header = F) %>% unlist
-# cts_linear_subset = cts_linear[rownames(cts_linear) %in% genelist_RBP,]
-# cts_linear_subset = log2(cts_linear_subset + 1)
-
-
 # Load Linear Data (Poly-A) -> TPM
 input_list = get_data_linear(slot = 'data', annot = NULL, type = type, polyA = T)
 cts_linear = input_list[[1]] ;  meta = input_list[[2]] ; rm(input_list)
