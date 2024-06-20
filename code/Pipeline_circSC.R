@@ -23,10 +23,10 @@ suppressMessages({
 ################################################################################
 
 # Load Datasets
-meta = data.frame(fread('results/6.SingleCell/data/sample.csv', sep = '\t'))
+meta = data.frame(fread('results/data/sample.csv', sep = '\t'))
 meta = meta[meta$Tissue.Type %in% c('Brain','neural stem cell'),]
 
-list_dir = paste0('/home/local/suwanyu_971004/circRNA/results/6.SingleCell/data/',
+list_dir = paste0('results/6.SingleCell/data/',
                   meta$Accession.number,
                   "_gene_count.tsv")
 names(list_dir) = meta$Accession.number
@@ -340,7 +340,7 @@ rm(list=ls())
 gc()
 
 reduction_method = 'harmony'
-res = 0.3
+res = 0.14
 
 dir.create(str_glue('3.Annotation_v2/{reduction_method}_{res}'), showWarnings = F, recursive = T)
 
