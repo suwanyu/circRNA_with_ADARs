@@ -1,5 +1,3 @@
-getwd()
-setwd('/home/local/suwanyu_971004/circRNA/')
 
 rm(list=ls())
 gc()
