@@ -15,8 +15,8 @@ This repository contains code for the analysis of circRNA genesis and its relati
 
 ### References
 
-- GEO RNA Atlas: GSE138734
-- CircSC database: [ref]
+- GEO RNA Atlas: GSE138734 [link](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE138734)
+- CircSC database [link](https://ngdc.cncb.ac.cn/circatlas/circSC/index.html)
 
 ### License
 
