@@ -58,14 +58,6 @@ ggplot(results_melted, aes(x = ID, y = value, fill = variable)) +
 ################################################################################
 # 12. Cell Type Proportion <-> Total SCI
 ################################################################################
-
-# Results & Visualization
-results = data.frame(fread('results/RESTART/11.Deconvolution/results/CA_deconv_perm100.csv'))
-
-rownames(results) = results$Mixture
-results$Mixture = NULL
-results = results[,!(colnames(results) %in% c('P.value','Correlation','RMSE'))]
-
 # Load Count
 cutoff_prop_samples = 0.2
 type = 'tissue'
@@ -194,15 +186,15 @@ lapply(list_brain, function(x){
 p_combined = ggarrange(plotlist = list_p, ncol = 3, nrow =3, common.legend = T, legend = 'right')
 
 # Gene-level
-cts_agg_filtered = readRDS(file = 'results/RESTART/3.DEG_Brain/cts_agg_filtered.rds')
+cts_agg_filtered = readRDS(file = 'results/cts_agg_filtered.rds')
 cts_agg_filtered = cts_agg_filtered[,c('hgnc_symbol',list_brain)]
 
 # RIP-seq
-df_gene_bind = read.csv(file = 'results/4.ADARB2_RIP/ADAR3_Binding_RIP.txt', sep = '\t')
+df_gene_bind = read.csv(file = 'results/ADAR3_Binding_RIP.txt', sep = '\t')
 gene_bind = df_gene_bind$Gene
 
 # Universe Genesets
-results_to_save = readRDS(file.path('results/RESTART/3.DEG_Brain/', 'DEG_SCI_Aggregated_Sum.rds'))
+results_to_save = readRDS(file.path('results/', 'DEG_SCI_Aggregated_Sum.rds'))
 
 cutoff_padj = 0.05
 cutoff_LFC = 1
