@@ -123,7 +123,7 @@ fwrite(LC_ratio, 'results/LCratio_withNAandPseudocount_Milion.txt', sep = '\t')
 ################################################################################
 # 2. PCA analysis
 ################################################################################
-source('scripts/manuscript/Utils.R')
+source('utils.R')
 
 require(factoextra)
 require(missMDA)
