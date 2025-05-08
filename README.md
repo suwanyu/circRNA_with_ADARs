@@ -20,10 +20,6 @@ This study has been published in *Computers in Biology and Medicine*:
 - Brain circRNA transcriptome is distinct from other tissues.  
 - ADARB2 enhances the synthesis of circRNAs **specifically in inhibitory neurons**.
 
-
-#### 🧠 Summary
-This study investigates circular RNA (circRNA) regulation with ADARB2 enrichment in inhibitory neurons. Through integrative high-throughput sequencing and computational analysis, a set of circRNAs potentially regulated by ADARB2 was identified. The findings suggest that ADARB2 promotes circRNA biogenesis in inhibitory neurons by binding to precursor RNAs.
-
 ---
 
 ### 📊 Datasets
