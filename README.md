@@ -1,4 +1,4 @@
-## circRNA Analysis Pipeline
+## Integrated Analysis of CircRNA Regulation with ADARB2 Enrichment in Inhibitory Neurons
 
 [![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.compbiomed.2024.109212-blue)](https://doi.org/10.1016/j.compbiomed.2024.109212)
 
